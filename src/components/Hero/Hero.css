@@ -475,18 +475,19 @@
   }
 
   .hero-section__visual {
-    min-height: 620px;
+    min-height: 720px;
   }
 
   .hero-section__photo {
+    animation: none;
     position: relative;
     top: 0;
-    transform: rotate(0);
+    transform: none;
     width: 100%;
   }
 
   .route-card {
-    inset: 216px auto auto 50%;
+    inset: 286px auto auto 50%;
     border-radius: 30px;
     min-height: 380px;
     padding: 20px;
