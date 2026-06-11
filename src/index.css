@@ -1,0 +1,86 @@
+:root {
+  --bg: #f7f1e5;
+  --paper: #fffaf1;
+  --surface: rgba(255, 250, 241, 0.82);
+  --surface-solid: #fffaf1;
+  --ink: #17211f;
+  --muted: #66736f;
+  --line: rgba(23, 33, 31, 0.12);
+  --accent: #f4a925;
+  --accent-soft: #ffe8b1;
+  --accent-dark: #9b6410;
+  --green: #1f6f63;
+  --green-soft: #dceee8;
+  --danger: #c65b3f;
+  --shadow: 0 24px 70px rgba(42, 31, 14, 0.12);
+  --font-display: "Bahnschrift", "Aptos Display", "Trebuchet MS", sans-serif;
+  --font-body: "Aptos", "Trebuchet MS", "Verdana", sans-serif;
+  color: var(--ink);
+  color-scheme: light;
+  font-family: var(--font-body);
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.45), transparent 36%),
+    radial-gradient(circle at top left, rgba(244, 169, 37, 0.16), transparent 34rem),
+    linear-gradient(135deg, #f9f1df 0%, #f6efe5 48%, #edf5ef 100%);
+  margin: 0;
+  min-width: 320px;
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgba(23, 33, 31, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 33, 31, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+  pointer-events: none;
+  position: fixed;
+  z-index: -3;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(244, 169, 37, 0.72);
+  outline-offset: 4px;
+}
+
+#root {
+  min-height: 100svh;
+}

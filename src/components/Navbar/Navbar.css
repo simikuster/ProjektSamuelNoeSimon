@@ -1,0 +1,144 @@
+.navbar {
+  align-items: center;
+  animation: nav-drop 640ms ease both;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 250, 241, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(42, 31, 14, 0.1);
+  display: flex;
+  gap: 22px;
+  justify-content: space-between;
+  left: 0;
+  margin: 16px auto 0;
+  padding: 10px;
+  position: sticky;
+  right: 0;
+  top: 16px;
+  width: min(1180px, calc(100% - 32px));
+  z-index: 50;
+}
+
+.navbar__brand {
+  align-items: center;
+  color: var(--ink);
+  display: inline-flex;
+  gap: 12px;
+  min-width: max-content;
+  text-decoration: none;
+}
+
+.navbar__mark {
+  background: var(--ink);
+  border-radius: 50%;
+  color: var(--paper);
+  display: grid;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 900;
+  height: 44px;
+  letter-spacing: -0.04em;
+  place-items: center;
+  width: 44px;
+}
+
+.navbar__brand strong {
+  display: block;
+  font-size: 0.95rem;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.navbar__brand small {
+  color: var(--muted);
+  display: block;
+  font-size: 0.72rem;
+  margin-top: 2px;
+}
+
+.navbar__links {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.navbar__links a,
+.navbar__cta {
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 12px 15px;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+  white-space: nowrap;
+}
+
+.navbar__links a {
+  color: var(--muted);
+}
+
+.navbar__links a:hover {
+  background: rgba(31, 111, 99, 0.08);
+  color: var(--ink);
+}
+
+.navbar__cta {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.navbar__cta:hover {
+  transform: translateY(-1px);
+}
+
+@keyframes nav-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    border-radius: 28px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navbar__links {
+    justify-content: flex-start;
+    order: 3;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    width: 100%;
+  }
+
+  .navbar__links::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    top: 8px;
+    width: min(100% - 18px, 1180px);
+  }
+
+  .navbar__brand small {
+    display: none;
+  }
+
+  .navbar__cta {
+    display: none;
+  }
+}
